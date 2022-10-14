@@ -1,0 +1,40 @@
+<h1 mat-dialog-title>Hi</h1>
+<div mat-dialog-content>
+  <mat-form-field class="cssMatFormField" appearance="fill">
+    <mat-label>Tên tổ chức</mat-label>
+    <input matInput id="OrganizationName" name="OrganizationName" [(ngModel)]="OrganizationDetails.OrganizationName">
+</mat-form-field>
+<table cellspacing="0"><tr>
+    <td><mat-form-field class="cssMatFormFieldTd" appearance="fill">
+            <mat-label>Tên viết tắt</mat-label>
+            <input matInput id="abbreviation" name="abbreviation" [(ngModel)]="OrganizationDetails.abbreviation">
+        </mat-form-field></td>
+    <!-- <td> <mat-form-field class="cssMatFormFieldTd" appearance="fill">
+        <mat-label>Cấp đơn vị</mat-label>
+        <mat-select>
+            <mat-option value="option">Cấp 1</mat-option>
+            <mat-option value="option">Cấp 2</mat-option>
+            <mat-option value="option">Cấp 3</mat-option>
+            <mat-option value="option">Cấp 4</mat-option>
+        </mat-select>
+        </mat-form-field></td> -->
+        <td><mat-form-field class="cssMatFormFieldTd" appearance="fill">
+            <mat-label>Cấp đơn vị</mat-label>
+            <input matInput id="OrganizationLevel" name="OrganizationLevel" [(ngModel)]="OrganizationDetails.OrganizationLevel">
+        </mat-form-field></td>
+</tr></table>
+<table cellspacing="0"><tr>
+    <td><mat-form-field class="cssMatFormFieldTd" appearance="fill">
+            <mat-label>Thuộc đơn vị</mat-label>
+            <input matInput id="belongtoUnit" name="belongtoUnit" [(ngModel)]="OrganizationDetails.belongtoUnit">
+        </mat-form-field></td>
+    <td><mat-form-field class=" cssMatFormFieldTd" appearance="fill">
+            <mat-label>Trưởng/Phụ trách đơn vị</mat-label>
+            <input matInput id="personInCharge" name="personInCharge" [(ngModel)]= "OrganizationDetails.personInCharge">
+    </mat-form-field></td>
+</tr></table>   
+</div>
+<div mat-dialog-actions>
+  <button mat-button color="warn" (click)="onNoClick()">Hủy</button>
+  <button mat-button color="primary" (click)="editOrganization($event)" cdkFocusInitial>Lưu</button>
+</div>  

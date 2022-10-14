@@ -1,0 +1,40 @@
+<section fxLayout="column" fxFlexAlign="stretch">
+    <div fxFlexAlign="center">
+        <mat-toolbar color="primary" style="height: 50px;">
+            <button mat-icon-button (click)="drawer.toggle()" class="example-icon" aria-label="Example icon-button with menu icon">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span>Quản lý tài liệu</span>
+        </mat-toolbar>
+    </div>
+
+    <div fxFlexAlign="center">
+        <div class="phai">
+            <mat-drawer-container class="example-container" autosize>
+                <div class="example-content">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwZ6qYAY819_bDHli_8-hKjH-8GbDHiUAD-w&usqp=CAU" alt="" width="170px" height="170px">
+                </div>
+                <div class="example-content">
+                    <h3>Administrator</h3>
+                </div>
+                <mat-drawer #drawer class="example-sidenav" mode="side">
+                    <mat-nav-list>
+                        <a mat-list-item routerLinkActive="" aria-current="false" href="organization" class="">
+                            Tổ chức
+                        </a>
+                        <a mat-list-item routerLinkActive="" aria-current="false" href="#">
+                            Phòng ban
+                        </a>
+                        <a mat-list-item routerLinkActive="" aria-current="false" href="#">
+                            Nhân sự
+                        </a>
+                    </mat-nav-list>
+                </mat-drawer>
+            </mat-drawer-container>
+        </div>
+        
+        <div class="kt">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</section>
